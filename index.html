@@ -12,6 +12,7 @@
        	padding: 0;
        	  height: 100vh;
         width: 100vw;
+        position: relative;
 
        }
     </style>
@@ -47,8 +48,20 @@
         });
       }
     </script>
+
+    
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA-IBLs0bvwYtY8MAqXSOZNPtcg6u3cWI&callback=initMap">
     </script>
+
+    <div class="div" style="border: 1px grey solid; position: absolute; z-index: 100; bottom: 30px; margin:auto; left: 40%; background-color: grey; width: 25%; border-radius: 10px; height: 10%;">
+
+
+    	This is the text<br />
+    	This is the second text<br />
+    </div>
+
+    <input type="text" name="text" id="text" style=" position: absolute; z-index: 100; top: 200px; left: 40%; width: 25%; padding: 20px; border-radius: 5px;" placeholder="Where to?" />
+
   </body>
 </html>
