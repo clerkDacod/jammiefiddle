@@ -7,12 +7,16 @@
  	private $routeId;
  	private $increment;
 
- 	public function __construct($start, $end, $routeId,$increment){
+ 	// public function __construct($start, $end, $routeId,$increment){
 
- 		$this->startTime=$start;
- 		$this->endTime=$end;
- 		$this->increment=$increment;
- 		$this->routeId=$routeId;
+ 	// 	$this->startTime=$start;
+ 	// 	$this->endTime=$end;
+ 	// 	$this->increment=$increment;
+ 	// 	$this->routeId=$routeId;
+
+ 	// }
+
+ 	public function __construct(){
 
  	}
 
@@ -20,8 +24,14 @@
  		return $variable;
  	}
 
+ 	public function getFrequency($time, $routeID){
 
- 	
+ 		//searches for frequency within time frame
+ 		//returns frequency object
+ 	}
+
+
+
 
 
  	// Back end functions
