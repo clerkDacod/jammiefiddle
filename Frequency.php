@@ -17,8 +17,14 @@
  	}
 
  	public function __get($variable){
- 		return variable;
+ 		return $variable;
  	}
+
+
+ 	
+
+
+ 	// Back end functions
 
  	public function add(){
  		//adds to database
