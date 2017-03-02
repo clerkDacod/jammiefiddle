@@ -9,9 +9,7 @@ public class Route{
  private $endTime;
 
 
- // public function __construct($from, $to, $startingTime,$endTime,$id){
 
- // }
 
  public function __construct(){
 

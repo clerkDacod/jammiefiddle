@@ -4,16 +4,22 @@
 
 <?php
 
+require_once("../jammieStop");
 
-class{
 
-	private lat;
-	private long;
+class User{
 
-	public function __contruct($lat, $long){
+	private $lat;
+	private $long;
+	private $destination;
+
+	public function __contruct($lat, $long, $destinationId){
 
 		$this->lat=$lat;
 		$this->long=$long;
+		$this->destination= new jammieStop();
+		$this->destination->setUpFromId($destinationId);
+
 
 	}
 

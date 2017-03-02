@@ -12,28 +12,6 @@ final class jammieStop{
 	private $connection;
 	private $distancesArray= array();
 
-	// public function __construct($name, $lat, $long, $id){
-
-
-
-	// 	$this->name=$name;
-	// 	$this->lat=$lat;
-	// 	$this->long=$long;
-
-	// 	if($id=="empty"){
-			
-	// 		//initialise lat and long
-	// 		require_once("connect_to_database.php");
-	// 		$this->connection=$connection;
-
-	// 		$this->addToDataBase();
-	// 		$this->assignId();
-			
-	// 	}else{
-	// 		$this->id=$id;
-	// 	}
-		
-	// }
 
 	public fucniton __construct(){
 
@@ -42,7 +20,7 @@ final class jammieStop{
 
 	public function getNearestStop($lat, $long){
 
-		$retult=$con->query("SELECT * FROM jammie_stops");
+		$retult=$connection->query("SELECT * FROM jammie_stops");
 
 		while ($jammieStop= $result->fetch_object()) {
 			
@@ -53,6 +31,22 @@ final class jammieStop{
 		//arrange associate array from lowest to highest
 		//create nearestJammieStop object
 		//return nearestJammieStop object
+
+	}
+
+	
+
+	public function setUpFromId($id){
+
+		$retult=$connection->query("SELECT * FROM jammie_stops");
+		while ($jammieStop= $result->fetch_object()) {
+				$this->id=$jammieStop->id;
+				$this->name=$jammieStop->name;
+				$this->latitude=$jammieStop->latitude;
+				$this->longitude=$jammieStop->longitude;
+		}
+
+		
 
 	}
 

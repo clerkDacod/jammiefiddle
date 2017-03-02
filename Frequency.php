@@ -7,14 +7,7 @@
  	private $routeId;
  	private $increment;
 
- 	// public function __construct($start, $end, $routeId,$increment){
 
- 	// 	$this->startTime=$start;
- 	// 	$this->endTime=$end;
- 	// 	$this->increment=$increment;
- 	// 	$this->routeId=$routeId;
-
- 	// }
 
  	public function __construct(){
 
