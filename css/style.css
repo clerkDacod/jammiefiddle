@@ -35,7 +35,9 @@ width: 100%;
 	text-align: center;
 	border: 1px solid grey;
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: rgba(234, 234, 234, 0.6);
+	font-weight: bold;
+	font-size: 33px;
 
 }
 
@@ -45,7 +47,6 @@ width: 100%;
 	font-weight: bold;
 	background-color: #fff;
 	text-align: center;
-    transition: transform .6s ease-in-out .2s;
     display:none;
 }
 	

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
        #map {
               height: 100vh;
@@ -24,66 +25,7 @@
 
 
      <script>
-      function initMap() {
-        function show(){
-          $("#search_jam").show("slow");
-        }
-        window.setTimeout(show, 1000);
-
-        var tugwell = {lat: -33.9542646, lng: 18.4714981};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          mapTypeControl: true,
-           
-          streetViewControlOptions: {
-              position: google.maps.ControlPosition.RIGHT_BOTTOM
-          },
-
-          mapTypeControlOptions: {
-              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-              position: google.maps.ControlPosition.LEFT_BOTTOM
-          },
-
-          draggable: false, 
-          zoomControl: true, 
-          scrollwheel: false, 
-          disableDoubleClickZoom: false,
-          zoom: 18,
-          center: tugwell
-
-        });
-
-        var infoWindow = new google.maps.InfoWindow({map: map});
-
-
-        //HTML5 Geolocation
-         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('You are here.');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        }else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-
-
-
-        // var marker = new google.maps.Marker({
-        //   position: uluru,
-        //   map: map,
-        //   animation: google.maps.Animation.DROP
-        // });
-
-      }
+      
         
     </script>
 
@@ -119,7 +61,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
         
-        <div class="results_bar"></div>
+        <div class="results_bar"> <?php echo date("G:i:s");?></div>
 
         </div>
         <div class="col-sm-2"></div>
@@ -128,19 +70,9 @@
    </div> 
   </div>
 
- <div class="whereto3column">
-   <col-sm-3></col-xs-3>
-   <col-sm-3></col-xs-3>
-   <col-sm-3></col-xs-3>
- </div>
+ 
 
- <div class="results3column">
-   <col-sm-3></col-xs-3>
-   <col-sm-3></col-xs-3>
-   <col-sm-3></col-xs-3>
- </div>
-
-  <div class="sidenav">
+  <div class="sidenav" style="display: none;">
     <ul>
       <li></li>
       <li></li>
@@ -150,6 +82,7 @@
   </div>
    
    
+  <script src="js/script.js"></script>
 
    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA-IBLs0bvwYtY8MAqXSOZNPtcg6u3cWI&callback=initMap"></script>
    <scipt>

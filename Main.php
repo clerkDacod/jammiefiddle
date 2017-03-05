@@ -6,6 +6,7 @@ class Main{
 	private $max;
 	private $getNearestStop;
 	private $activeRoute;
+	private $time=strtotime(date('G:i'));
 
     private $time= strtotime(now());
 	public funtion __construct($user){
@@ -16,7 +17,7 @@ class Main{
 		$this->getNearestStop = $jammieStop->getNearestStop($this->user->lat, $this->user->long);
 
 		$route = new Route();
-		$this->activeRoute= $route->getRoute($this->time, $getNearestStop, $this->user->destion)
+		$this->activeRoute= $route->getRoute($this->time, $this->getNearestStop, $this->user->destion)
 
 		$this->max = $route->getTimeTillArrival($activeRoute);
 

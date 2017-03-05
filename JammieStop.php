@@ -28,9 +28,24 @@ final class jammieStop{
 
 		}
 
+		
+
+
 		//arrange associate array from lowest to highest
+		arsot($this->distancesArray);
+		$slicedArray= array_slice($this->distancesArray,0,1);
+
+		foreach ( $slicedArray as $key = > $value ) {
+
+			$nearestJammieStopToReturn = new self();
+			$nearestJammieStopToReturn->setUpFromId($key);
+			return $nearestJammieStopToReturn;
+
+		}
 		//create nearestJammieStop object
 		//return nearestJammieStop object
+
+
 
 	}
 

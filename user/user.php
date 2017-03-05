@@ -11,7 +11,7 @@ class User{
 
 	private $lat;
 	private $long;
-	private $destination;
+	private $destination = new jammieStop();
 
 	public function __contruct($lat, $long, $destinationId){
 
